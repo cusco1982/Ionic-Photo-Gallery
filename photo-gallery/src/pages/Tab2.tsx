@@ -11,8 +11,15 @@ import {
 } from '@ionic/react';
 
 
+import { usePhotoGallery } from '../hooks/usePhotoGallery';
+
+
 
 const Tab2: React.FC = () => {
+
+  const { takePhoto } = usePhotoGallery();
+
+
   return (
 
     <IonPage>
@@ -53,7 +60,7 @@ const Tab2: React.FC = () => {
         <IonContent>
           <IonFab vertical="bottom" horizontal="center" slot="fixed">
             <IonFabButton
-            //  onClick={() => takePhoto()}
+             onClick={() => takePhoto()}
              >
               <IonIcon icon={camera}></IonIcon>
             </IonFabButton>
